@@ -347,6 +347,8 @@ class Viewer(wx.Panel):
         self.save_automatically = False
         self.positions_above_threshold = None
         self.cell_id_indexes_above_threshold = None
+        self.ShowOrientationCube()
+
 
         Publisher.sendMessage("Press target mode button", pressed=False)
 
@@ -2880,14 +2882,13 @@ class Viewer(wx.Panel):
         axes.SetZAxisLabelText("Z")
         # axes.SetNormalizedLabelPosition(.5, .5, .5)
 
-        orientation_widget = vtkOrientationMarkerWidget()
-        orientation_widget.SetOrientationMarker(cube)
-        orientation_widget.SetViewport(0.85, 0.85, 1.0, 1.0)
-        # orientation_widget.SetOrientationMarker(axes)
-        orientation_widget.SetInteractor(self.interactor)
-        orientation_widget.SetEnabled(1)
-        orientation_widget.On()
-        orientation_widget.InteractiveOff()
+        self.orientation_widget = vtkOrientationMarkerWidget()
+        self.orientation_widget.SetOrientationMarker(cube)
+        self.orientation_widget.SetViewport(0.85, 0.85, 1.0, 1.0)
+        self.orientation_widget.SetInteractor(self.interactor)
+        self.orientation_widget.SetEnabled(1)
+        self.orientation_widget.InteractiveOff()
+        self.UpdateRender()
 
     def UpdateRender(self):
         self.interactor.Render()
