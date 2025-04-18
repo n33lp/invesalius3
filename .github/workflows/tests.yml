@@ -28,22 +28,22 @@ jobs:
                   libsm-dev \
                   libxtst-dev \
                   libunwind-dev \
-                  # freeglut3-dev \
-                  # libcurl4-openssl-dev \
-                  # libexpat1-dev \
-                  # libjpeg-dev \
-                  # libsdl2-dev \
-                  # libtiff-dev \
-                  # libwebkit2gtk-4.0-dev \
-                  # libgstreamer1.0-dev \
-                  # libgstreamer-plugins-base1.0-dev \
-                  # libpng-dev \
-                  # libxrandr-dev \
-                  # libxinerama-dev \
-                  # libxcursor-dev \
-                  # libxcomposite-dev \
-                  # libfreetype6-dev \
-                  # libxi-dev \
+                  libcurl4-openssl-dev \
+                  libexpat1-dev \
+                  libjpeg-dev \
+                  libsdl2-dev \
+                  libtiff-dev \
+                  libwebkit2gtk-4.0-dev \
+                  freeglut3-dev \
+                  libgstreamer1.0-dev \
+                  libgstreamer-plugins-base1.0-dev \
+                  libpng-dev \
+                  libxrandr-dev \
+                  libxinerama-dev \
+                  libxcursor-dev \
+                  libxcomposite-dev \
+                  libfreetype6-dev \
+                  libxi-dev \
 
 
       - uses: astral-sh/setup-uv@v5
